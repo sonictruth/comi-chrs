@@ -29,6 +29,8 @@ Here's a list of available tasks:
   * runs `serve`.
 * `component`
   * scaffolds a new Angular component.
+* `lint`
+  * Runs eslint.
 
 # TODO
 
