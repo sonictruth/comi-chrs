@@ -1,3 +1,4 @@
+/* eslint-disable */
 import HeroModule from './hero';
 import HeroController from './hero.controller';
 import HeroComponent from './hero.component';

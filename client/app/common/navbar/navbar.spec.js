@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import NavbarModule from './navbar'
 import NavbarController from './navbar.controller';
 import NavbarComponent from './navbar.component';

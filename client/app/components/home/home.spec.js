@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import HomeModule from './home';
 import HomeController from './home.controller';
 import HomeComponent from './home.component';
