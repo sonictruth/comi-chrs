@@ -1,5 +1,10 @@
 class AboutController {
-  constructor() {
+  constructor(marvel) {
+    'ngInject';
+    marvel.getCharacters()
+     .then((data) => {
+       console.log(data);
+     });
     this.name = 'about';
   }
 }

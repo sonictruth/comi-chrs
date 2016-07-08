@@ -34,4 +34,4 @@ Here's a list of available tasks:
 
 # TODO
 
-- Webpack Extract CSS
+- Clean up / optimize dev modules
