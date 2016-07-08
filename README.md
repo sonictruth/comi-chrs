@@ -34,3 +34,4 @@ Here's a list of available tasks:
 
 # TODO
 
+- Webpack Extract CSS

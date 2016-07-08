@@ -1,5 +1,5 @@
 import template from './home.html';
-import controller from './home.controller';
+import controller from './home.controller.js';
 import './home.scss';
 
 const homeComponent = {

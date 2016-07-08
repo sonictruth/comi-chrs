@@ -1,5 +1,5 @@
 import template from './navbar.html';
-import controller from './navbar.controller';
+import controller from './navbar.controller.js';
 import './navbar.scss';
 
 const navbarComponent = {

@@ -1,6 +1,6 @@
 import angular from 'angular';
-import Home from './home/home';
-import About from './about/about';
+import Home from './home/home.js';
+import About from './about/about.js';
 
 const componentModule = angular.module('app.components', [
   Home,

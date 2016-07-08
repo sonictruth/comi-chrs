@@ -1,10 +1,13 @@
-import angular from 'bootstrap-loader';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import Common from './common/common';
-import Components from './components/components';
-import AppComponent from './app.component';
-import 'normalize.css';
+import Common from './common/common.js';
+import Components from './components/components.js';
+import AppComponent from './app.component.js';
+
+import 'bootstrap';
+import '../../node_modules/bootstrap/dist/css/bootstrap.css'; // FIXME: ugly path
+import '../../node_modules/bootstrap/dist/css/bootstrap-theme.css';
+
 
 angular.module('app', [
   uiRouter,

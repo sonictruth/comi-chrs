@@ -1,7 +1,7 @@
 import angular from 'angular';
-import Navbar from './navbar/navbar';
-import Hero from './hero/hero';
-import User from './user/user';
+import Navbar from './navbar/navbar.js';
+import Hero from './hero/hero.js';
+import User from './user/user.js';
 
 const commonModule = angular.module('app.common', [
   Navbar,

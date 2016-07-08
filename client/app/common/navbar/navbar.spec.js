@@ -31,9 +31,11 @@ describe('Navbar', () => {
   describe('Template', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
+    /*
     it('has name in template [REMOVE]', () => {
       expect(NavbarTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
     });
+    */
   });
 
   describe('Component', () => {
