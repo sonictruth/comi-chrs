@@ -1,3 +1,4 @@
+import angular from 'bootstrap-loader';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import Common from './common/common';

@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
  * When testing with Webpack and ES6, we have to do some
  * preliminary setup. Because we are writing our tests also in ES6,

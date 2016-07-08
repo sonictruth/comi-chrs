@@ -1,6 +1,6 @@
 import template from './about.html';
 import controller from './about.controller';
-import './about.styl';
+import './about.scss';
 
 const aboutComponent = {
   restrict: 'E',
