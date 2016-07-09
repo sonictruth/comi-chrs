@@ -1,9 +1,8 @@
 @import '../common.scss';
-@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
-@import url(https://fonts.googleapis.com/css?family=Khand);
+/* @import url(https://fonts.googleapis.com/css?family=Khand); */
 
 nav{
-	font-family: 'Khand', cursive;
+	font-family: 'Khand', Impact, sans-serif;
 	a {
 	  text-transform: uppercase;
 	}

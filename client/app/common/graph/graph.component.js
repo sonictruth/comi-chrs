@@ -7,6 +7,7 @@ const graphComponent = {
   bindings: {},
   template,
   controller,
+  controllerAs: 'vm',
 };
 
 export default graphComponent;
