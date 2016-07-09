@@ -1,13 +1,16 @@
-/* eslint no-duplicate-imports: false */
+/*eslint-disable*/
 import * as d3 from 'd3';
-import { event as currentEvent } from 'd3'; // https://github.com/d3/d3/issues/2733
+// s3 + webpack bug https://github.com/d3/d3/issues/2733
+import { event as currentEvent } from 'd3';
 import dummy from 'json!./dummy.json';
+/*eslint-enable*/
 
 // TODO: make a directive and move the d3 code from controller
 
 class GraphController {
-  constructor($scope) {
+  constructor($scope, marvelService, $state, $location) {
     'ngInject';
+    this.$state = $state;
     this.$scope = $scope;
     this.$scope.loading = true;
     const nodesAndLinks = this.processNodes(dummy.data);
@@ -24,7 +27,8 @@ class GraphController {
       const image = `${character.thumbnail.path}.${character.thumbnail.extension}`;
 
       if (character.comics.items.length > 0) {
-        const characterNode = { count: 1, name: character.name, image };
+        const characterNode =
+          { count: 1, id: character.id, name: character.name, image, type: 'character' };
         characterNode.links = [];
         nodes.push(characterNode);
         character.comics.items.forEach((comic) => {
@@ -35,7 +39,7 @@ class GraphController {
             cComic.count++;
             characterNode.links.push(cComic);
           } else {
-            const comicNode = { name, id, count: 1 };
+            const comicNode = { name, id, count: 1, type: 'comic' };
             comics[id] = comicNode;
             characterNode.links.push(comicNode);
           }
@@ -148,6 +152,8 @@ class GraphController {
           .html(`<strong>${d.name}</strong>`);
     }).on('mouseout', () => {
       toolTip.attr('style', 'display: none;');
+    }).on('click', (d) => {
+      this.$state.go(d.type, { id: d.id });
     });
 
     force.on('tick', () => {
