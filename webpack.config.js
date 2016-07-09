@@ -29,10 +29,16 @@ module.exports = {
       loader: "url?limit=10000&mimetype=image/svg+xml"
     }, {
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract("style-loader", "css-loader", "sass-loader")
+      loader: ExtractTextPlugin.extract("style", "css!sass")
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+      loader: ExtractTextPlugin.extract("style", "css")
+    }, {
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      loaders: [
+        'file?hash=sha512&digest=hex&name=[name]_[hash].[ext]',
+        'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+      ]
     }]
   },
   plugins: [
@@ -41,6 +47,7 @@ module.exports = {
 
     // Required by Bootstrap
     new webpack.ProvidePlugin({
+      d3: "d3",
       $: "jquery",
       jQuery: "jquery"
     }),

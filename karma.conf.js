@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 module.exports = function(config) {
   config.set({
     // base path used to resolve all patterns
@@ -43,12 +44,6 @@ module.exports = function(config) {
           test: /\.html$/,
           loader: 'raw'
         }, {
-          test: /\.scss/,
-          loader: 'style!css!sass'
-        }, {
-          test: /\.css$/,
-          loader: 'style!css'
-        }, {
           test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
           loader: "file"
         }, {
@@ -60,6 +55,18 @@ module.exports = function(config) {
         }, {
           test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
           loader: "url?limit=10000&mimetype=image/svg+xml"
+        }, {
+          test: /\.scss$/,
+          loader: "style!css!sass"
+        }, {
+          test: /\.css$/,
+          loader: "style!css"
+        }, {
+          test: /\.(jpe?g|png|gif|svg)$/i,
+          loaders: [
+            'file?hash=sha512&digest=hex&name=[name]_[hash].[ext]',
+            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+          ]
         }]
       }
     },

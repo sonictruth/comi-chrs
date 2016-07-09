@@ -2,7 +2,6 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import Common from './common/common.js';
 import Components from './components/components.js';
-import Services from './services/services.js';
 import AppComponent from './app.component.js';
 
 import 'bootstrap';
@@ -14,7 +13,6 @@ angular.module('app', [
   uiRouter,
   Common,
   Components,
-  Services,
 ])
 .config(($locationProvider) => {
   'ngInject';
@@ -24,3 +22,4 @@ angular.module('app', [
 })
 
 .component('app', AppComponent);
+

@@ -1,2 +1,18 @@
-@import '../common.scss'
+@import '../common.scss';
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+@import url(https://fonts.googleapis.com/css?family=Khand);
 
+nav{
+	font-family: 'Khand', cursive;
+	a {
+	  text-transform: uppercase;
+	}
+}
+
+	.navbar-inverse {
+	.navbar-brand{
+	    cursor: crosshair;
+		color: red;
+		font-size: 25px;
+		}
+	}
