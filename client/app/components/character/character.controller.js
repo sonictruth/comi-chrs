@@ -1,8 +1,9 @@
 class CharacterController {
-  constructor($state) {
+  constructor($state, marvelService) {
     'ngInject';
-    console.info($state.params.id);
+    this.$state = $state;
     this.name = 'character';
+    marvelService.getCharacter($state.params.id);
   }
 }
 

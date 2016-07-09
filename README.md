@@ -1,5 +1,6 @@
-# Angular 1.5 +  ES6 + Webpack + Gulp
-Forked from NG6-starter. 
+# ComiChrs: Angular 1.5 + ES6 + Webpack + Gulp
+
+Seed used NG6-starter.
 Changes:
 - Replaced stylus with SCSS
 - Add Bootstrap.

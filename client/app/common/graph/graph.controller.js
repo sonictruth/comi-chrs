@@ -8,7 +8,7 @@ import dummy from 'json!./dummy.json';
 // TODO: make a directive and move the d3 code from controller
 
 class GraphController {
-  constructor($scope, marvelService, $state, $location) {
+  constructor($scope, marvelService, $state) {
     'ngInject';
     this.$state = $state;
     this.$scope = $scope;

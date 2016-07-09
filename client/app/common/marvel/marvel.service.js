@@ -23,6 +23,13 @@ export default class Marvel {
     return this.$http(config).then((response) => response.data.data);
   }
 
+  getComic(comicId) {
+    return this.apiRequest(`comics/${comicId}`, {});
+  }
+
+  getCharacter(characterId) {
+    return this.apiRequest(`character/${characterId}`, {});
+  }
 
   getCharactersFromComic(comicId) {
     return this.apiRequest(`comics/${comicId}/characters`, {});
