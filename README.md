@@ -35,4 +35,6 @@ Here's a list of available tasks:
 
 # TODO
 
+- CSS cleanup / add post-css webpack plugin
+- Angular optimizations
 - Clean up / optimize dev modules

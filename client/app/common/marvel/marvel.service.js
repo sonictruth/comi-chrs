@@ -13,10 +13,14 @@ export default class Marvel {
 
 
   apiRequest(endPoint, params) {
+    let url = endPoint;
+    if (url.indexOf('http') !== 0) {
+      url = `${this.httpRoot}${endPoint}`;
+    }
     Object.assign(params, { apikey: this.apiKey });
     const config = {
       method: 'GET',
-      url: `${this.httpRoot}${endPoint}`,
+      url,
       params,
     };
     // TODO: check for error codes in response
@@ -28,7 +32,7 @@ export default class Marvel {
   }
 
   getCharacter(characterId) {
-    return this.apiRequest(`character/${characterId}`, {});
+    return this.apiRequest(`characters/${characterId}`, {});
   }
 
   getCharactersFromComic(comicId) {

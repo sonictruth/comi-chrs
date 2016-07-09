@@ -1,3 +1,12 @@
 <div>
-  <h1>{{ $ctrl.name }}</h1>
+  <div ng-if="$ctrl.loading" class="animated fadeIn">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+        Loading comic...
+      </div>
+  </div>
+
+  <h1>{{ $ctrl.comic.title }}</h1>
 </div>
