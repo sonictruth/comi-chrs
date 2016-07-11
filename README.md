@@ -4,7 +4,7 @@ Seed used NG6-starter.
 Changes:
 - Replaced stylus with SCSS
 - Added Bootstrap
-- Aded eslint to Gulp with airbnb settings
+- Added eslint to Gulp with airbnb settings
 
 # Getting Started
 
