@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ComiChrs: Angular 1.5 + ES6 + Webpack + Gulp
 
 Seed used NG6-starter.
@@ -35,11 +34,13 @@ Here's a list of available tasks:
   * Runs eslint.
 
 # TODO
-
+- Multi-browser compatibility tests
+- Tests specs
 - CSS cleanup / add post-css webpack plugin
 - Angular optimizations
 - Clean up / optimize dev modules
-=======
+
+
 # Gameloft Frontend Test
 The code test you are about to achieve aims to test your overall programming skills and general knowledge of good coding practices and design patterns. We will pay attention not only to the accuracy and functionality of the piece of software delivered but also the creativity pulled in to ensure the overall stability and scalability of the solution provided. Feel free to take any architectural approach and make use of any toolset of your choice. The general requirements are:
 
@@ -76,4 +77,3 @@ The code test entails delivering a self-contained web project with two different
 **Example:** Building up from the previous example, display a slide-in pane featuring detailed information from each Marvel character upon clicking on its corresponding node in the infographics. The location bar should reflect that state change with an unique URL, so we can move back to the previous detail view and forth by clicking on the browser's history buttons. Reaching  the same application state by loading such URL on the location bar should be supported as well, so some minor tweaks in your server implementation might be required as well.
 
 #### Time allocated for the test: Maximum 4 days.
->>>>>>> fd252078fe71d15ce496a3ee99dd8464e119fdc0
