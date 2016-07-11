@@ -6,6 +6,61 @@ $lightBgColor: #37474f;
 $lightTextColor: #f5f5f5;
 $darkTextColor: #212121;
 
+@font-face {
+    font-family: 'badaboom';
+    src: url('../../fonts/badabb__-webfont.woff2') format('woff2'),
+         url('../../fonts/badabb__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1.title
+{
+  font-family: 'badaboom';
+}
+
+.character-thumbnail{
+  width: 100%;
+  border: 5px solid black;
+}
+
+.character-box{
+  margin-top: 20px;
+}
+
+.description{
+   font-family: 'badaboom';
+   padding-bottom: 20px;
+}
+
+.rotate img {
+  border: 1px solid black;
+  box-shadow: 6px 10px 36px -10px rgba(0,0,0,0.75);
+  width: 100%;
+}
+
+
+.rotate .img {
+  height: 200px;
+}
+
+.rotate .img:nth-child(2n+1) {
+  transform: rotate(-2deg);
+}
+.rotate .img:nth-child(3n+2) {
+  transform: rotate(1deg);
+}
+.rotate .img:nth-child(5n+3) {
+  transform: rotate(-3deg);
+}
+.rotate .img:nth-child(7n+5) {
+  transform: rotate(6deg);
+}
+.rotate .img:nth-child(11n+7) {
+  transform: rotate(4deg);
+}
+
+
 body {
   height: 100%;
 }

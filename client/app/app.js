@@ -8,7 +8,7 @@ import 'animate.css';
 
 import 'bootstrap';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'; // FIXME: ugly path
-import '../../node_modules/bootstrap/dist/css/bootstrap-theme.css';
+// import '../../node_modules/bootstrap/dist/css/bootstrap-theme.css';
 
 
 angular.module('app', [

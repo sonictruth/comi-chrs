@@ -1,12 +1,27 @@
 <div>
   <div ng-if="$ctrl.loading" class="animated fadeIn">
-      <div class="spinner">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-        Loading comic...
-      </div>
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+      Loading comic...
+    </div>
+  </div>
+  <div ng-if="!$ctrl.loading" class="character-box row">
+    <div class="col-sm-4">
+     <img class="animated fadeIn character-thumbnail" 
+      ng-src="{{ $ctrl.comic.thumbnail.path }}.{{ $ctrl.comic.thumbnail.extension }}">
+   </div>
+   <div class="col-sm-8">
+     <h1 class="title animated flipInX">{{ $ctrl.comic.title }}</h1>
+     <div class="description" ng-bind-html="$ctrl.comic.description"></div>
+     <div class="row rotate">
+
+       <div title="" ng-repeat="character in $ctrl.characters track by $index" class="col-sm-3 img animated fadeIn">
+        <a ui-sref="character({id:character.id})"><img  ng-src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" ></a>
+       </div>
+     </div>
   </div>
 
-  <h1>{{ $ctrl.comic.title }}</h1>
+</div>
 </div>

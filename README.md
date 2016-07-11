@@ -3,7 +3,7 @@
 Seed used NG6-starter.
 Changes:
 - Replaced stylus with SCSS
-- Add Bootstrap.
+- Add Bootstrap
 - eslintrc
 
 # Getting Started
