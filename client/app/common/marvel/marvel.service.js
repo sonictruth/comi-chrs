@@ -7,7 +7,7 @@ export default class Marvel {
     this.$http = $http;
 
     // TODO: move settings to a config file or ENV variables and use WebPack ENV plugin for dev prod
-    this.httpRoot = 'http://gateway.marvel.com:80/v1/public/';
+    this.httpRoot = 'https://gateway.marvel.com:80/v1/public/';
     this.apiKey = '86bc8cec2a3a9ae2de1da3b8ed5269a1';
   }
 
