@@ -14,7 +14,8 @@
    </div>
    <div class="col-sm-8">
      <h1 class="title animated flipInX">{{ $ctrl.character.name }}</h1>
-     <div>{{ $ctrl.character.description }}</div>
+
+     <div class="description"  >{{$ctrl.character.description}}</div>
      <div class="row rotate">
 
        <div title="" ng-repeat="comic in $ctrl.comics track by $index" class="col-sm-3 img animated fadeIn">

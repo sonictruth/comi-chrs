@@ -62,12 +62,12 @@ class GraphController {
         });
       }
     });
-    // pun the comics in nodes array
+    // Put the comics in nodes array
     Object.keys(comics).forEach((comicId) => {
       const comic = comics[comicId];
       nodes.unshift(comic);
     });
-    // make links
+    // Make links
     nodes.forEach((node, index) => {
       if (node.links && node.links.length > 0) {
         node.links.forEach((comicLink) => {
