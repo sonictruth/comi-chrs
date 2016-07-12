@@ -5,7 +5,7 @@ var config = require('./webpack.config');
 
 config.output = {
   filename: '[name]_[hash].bundle.js',
-  publicPath: '',
+  // publicPath: '.',
   path: path.resolve(__dirname, 'dist')
 };
 
