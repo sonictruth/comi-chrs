@@ -16,6 +16,8 @@ export default class Marvel {
     let url = endPoint;
     if (url.indexOf('http') !== 0) {
       url = `${this.httpRoot}${endPoint}`;
+    } else {
+      url = url.split('http://').join('https://');
     }
     Object.assign(params, { apikey: this.apiKey });
     const config = {
