@@ -3,8 +3,8 @@
 Seed used NG6-starter.
 Changes:
 - Replaced stylus with SCSS
-- Add Bootstrap
-- eslintrc
+- Added Bootstrap
+- Added eslint to Gulp with airbnb settings
 
 # Getting Started
 
