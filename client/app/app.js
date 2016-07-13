@@ -7,8 +7,8 @@ import AppComponent from './app.component.js';
 import 'animate.css';
 
 import 'bootstrap';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css'; // FIXME: ugly path
-// import '../../node_modules/bootstrap/dist/css/bootstrap-theme.css';
+import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap-theme.css';
 
 
 angular.module('app', [

@@ -1,14 +1,7 @@
 <section >
 
-  <div ng-if="vm.loading" class="animated fadeIn">
+  <loader ng-if="vm.loading"></loader>
 
-    <div class="spinner">
-      <div class="bounce1"></div>
-      <div class="bounce2"></div>
-      <div class="bounce3"></div>
-      Loading characters...
-    </div>
-  </div>
   <div ng-show="!vm.loading" class="animated fadeIn">
 
 

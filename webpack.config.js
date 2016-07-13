@@ -12,6 +12,10 @@ module.exports = {
       test: /\.js$/,
       exclude: [/app\/lib/, /node_modules/],
       loader: 'ng-annotate!babel'
+    }
+    , {
+      test: /\.json/,
+      loader: 'json'
     }, {
       test: /\.html$/,
       loader: 'raw'

@@ -1,9 +1,11 @@
+
 /*eslint-disable*/
 import * as d3 from 'd3';
-// s3 + webpack bug https://github.com/d3/d3/issues/2733
+// D3 + babel bug https://github.com/d3/d3/issues/2733
 import { event as currentEvent } from 'd3';
-import dummy from 'json!./dummy.json'; // initial data will loaded from the boundle
 /*eslint-enable*/
+import dummy from './dummy.json'; // initial data will loaded from the boundle
+
 
 // TODO: make a directive and move the d3 code from controller
 
@@ -83,12 +85,13 @@ class GraphController {
 
   zoom(value) {
     // alert('Not working properly... use mouse to pan/zoom');
+    // FIXME: set center point when scaling
     const transform = d3.transform(this.svg.attr('transform'));
     const scale = transform.scale;
     const translate = transform.translate;
     scale[0] = scale[1] = scale[0] + value;
     this.svg.transition().attr('transform',
-      `scale (${scale[0]}, ${scale[1]}) translate( ${translate[0]},${translate[1]} )`);
+      `scale (${scale[0]}, ${scale[0]}) translate( ${translate[0]},${translate[1]} )`);
   }
 
   pan(axis, value) {
@@ -103,15 +106,16 @@ class GraphController {
 
 
   drawGraph(nodes, links) {
-    const width = 800;
-    const height = 600; // TODO: get value from browser
-
+    const containerName = '.chart';
+    const containerNode = document.querySelector(containerName);
     const force = d3.layout.force()
         .charge(-180)
         .linkDistance(90)
-        .size([width, height]);
+        .size([containerNode.clientWidth, containerNode.clientHeight]);
 
-    const toolTip = d3.select('.chart')
+    console.log([containerNode.clientWidth, containerNode.clientHeight]);
+
+    const toolTip = d3.select(containerName)
         .append('div')
         .attr('class', 'tooltip animated bounceIn')
         .attr('style', 'display: none;');
@@ -188,6 +192,9 @@ class GraphController {
         .attr('y', () => -30)
         .attr('height', () => 60)
         .attr('width', () => 60);
+
+
+    // TODO: Use event delegation
 
     node
     .on('mousedown', (d) => {
