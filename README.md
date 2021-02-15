@@ -1,5 +1,8 @@
 # ComiChrs: Angular 1.5 + ES6 + Webpack + Gulp
 
+http://sonictruth.github.io/comi-chrs
+
+
 Seed used NG6-starter.
 Changes:
 - Replaced stylus with SCSS
